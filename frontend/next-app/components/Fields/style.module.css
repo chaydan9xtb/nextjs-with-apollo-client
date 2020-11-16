@@ -1,0 +1,10 @@
+.position_icon {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.input_error {
+  border: 1px solid #ff5a60;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
