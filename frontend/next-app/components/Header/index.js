@@ -1,7 +1,10 @@
 import style from "./style.module.css";
 import Link from "next/link";
 
+import { useRouter } from "next/router";
+
 const Header = () => {
+  const router = useRouter();
   const path = "";
   return (
     <div>
@@ -16,6 +19,13 @@ const Header = () => {
           Register
         </a>
       </Link>
+      <span
+        onClick={() => {
+          router.push("/ddd");
+        }}
+      >
+        dddd
+      </span>
     </div>
   );
 };

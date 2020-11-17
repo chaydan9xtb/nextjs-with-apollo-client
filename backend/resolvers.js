@@ -18,6 +18,19 @@ const resolvers = {
       USER.push(newUser);
       return USER;
     },
+    updateUser: (parent, args, context, info) => {
+      const { id, username, password } = args;
+      const updateUser = USER.filter((item) => {
+        return item.id == id;
+      });
+      if (username) {
+        updateUser[0].username = username;
+      }
+      if (password) {
+        updateUser[0].password = password;
+      }
+      return USER;
+    },
   },
 };
 

@@ -24,6 +24,16 @@ const ADD_ACC = gql`
   }
 `;
 
+const UPDATE_ACC = gql`
+  mutation updateUser($id: String!, $username: String!, $password: String!) {
+    updateTodo(id: $id, username: $username, password: $password) {
+      id
+      username
+      password
+    }
+  }
+`;
+
 function Login() {
   const { data } = useQuery(GET_ACC);
   const [addUser, { inputData }] = useMutation(ADD_ACC);
@@ -35,7 +45,12 @@ function Login() {
   };
 
   const onSubmit = (values) => {
-    addUser({ username: values.username, password: values.password });
+    // register
+    addUser({
+      variables: { username: values.username, password: values.password },
+    });
+
+    // login
     // if (values.username && values.password) {
     //   const checkAcc = (data.getUsers || []).some(
     //     (item) =>
