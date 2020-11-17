@@ -1,3 +1,17 @@
 .active {
   color: #ff0000;
+  font-weight: bold;
+}
+.input_search {
+  width: 569px;
+}
+.input_search input {
+  background: #eaeaea;
+}
+.text_menu {
+  font-size: 15px;
+  color: #333;
+}
+.text_search {
+  font-size: 15px;
 }

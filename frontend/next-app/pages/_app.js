@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import "../styles/main.css";
 import Layout from "../components/Layout";
 import { ApolloProvider } from "@apollo/client";

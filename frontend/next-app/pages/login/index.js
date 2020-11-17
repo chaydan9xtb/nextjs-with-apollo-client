@@ -37,6 +37,7 @@ const UPDATE_ACC = gql`
 function Login() {
   const { data } = useQuery(GET_ACC);
   const [addUser, { inputData }] = useMutation(ADD_ACC);
+  const [updateUser, { inputDataUpdate }] = useMutation(UPDATE_ACC);
   const [viewError, setError] = useState("");
   const [viewPassWord, setViewPassWord] = useState(false);
 
@@ -112,9 +113,9 @@ function Login() {
                 Your email or password was incorrect
               </p>
             ) : null}
-            <div className="mb-16 mt-12">
+            <div className="relative">
               <button
-                className={`w-full text-white p-1 text-gray-200 h-8 ${styles.btn_submit_login}`}
+                className={`w-full text-white p-1 text-gray-200 h-8 mb-16 mt-12 ${styles.btn_submit_login}`}
                 type="submit"
               >
                 Submit
